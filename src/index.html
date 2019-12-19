@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Election</title>
+    </head>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <style>
+    
+        
+
+    </style>
+
+    <body>
+        Account: <span id="account"></span>
+
+        <div id='loader' style="margin:0px;">Loading...</div>
+        
+        <br><br>
+        
+        <div id="content" style="display:none" class="card container" style="margin-top:30px;">
+
+            <table class="table">
+                <tr>
+                    <td>#</td>
+                    <td>Name</td>
+                    <td>Votes</td>
+                </tr>
+                <tbody id="candidateResults">
+
+                </tbody>
+            </table><hr>
+
+            <form onSubmit="App.castVote(); return false;" style="display:none">
+                <div class="form-group">
+                    <label>Select Candidate</label>
+                    <select class="form-control" id="candidatesSelect">
+                        <option>Select here...</option>
+                    </select><br>
+                    <input type="submit" class="container btn btn-primary">
+                </div>
+            </form>
+
+            <div id="hasVoted" style="display:none; text-align: center">
+                <b>Thank you for voting !!!</b>
+            </div>
+
+        </div>
+
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.js"></script>
+    <script type="text/javascript" language="javascript" src="index.js"></script>
+    <script src="contract.js"></script>
+
+</html>
