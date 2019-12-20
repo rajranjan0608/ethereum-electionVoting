@@ -7,12 +7,15 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"cd src && node app.js"
   },
   "author": "Raj Ranjan",
   "license": "ISC",
   "dependencies": {
+    "@truffle/hdwallet-provider": "^1.0.27",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "truffle-contract": "^4.0.31"
+    "truffle-contract": "^4.0.31",
+    "truffle-hdwallet-provider": "^1.0.17"
   }
 }
