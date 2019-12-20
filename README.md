@@ -1,7 +1,7 @@
 # Voting for General Elections
 -------------------------------
 
-An Ethereum based blockchain web application implementing Voting for general Elections.
+An Ethereum based blockchain web application implementing Voting for general Elections. I am using Metamask as the Wallet Provider for this webiste. Therefore, you need Metamask extension in order to use this website.
 
 ### Tools and softwares neccessary for starting this application
 _____________________________________________________________
