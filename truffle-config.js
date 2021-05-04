@@ -1,18 +1,21 @@
 require('dotenv').config();
 const HDWalletProvider = require("truffle-hdwallet-provider");
-const mnemonic = process.env.MNEMONICS;
+
+//Account credentials from which our contract will be deployed
+const mnemonic = process.env.MNEMONIC;
+
+//API key of your Datahub account for Avalanche Fuji test network
+const APIKEY = process.env.APIKEY;
+
 module.exports = {
   networks: {
-    development: {
-      host: "127.0.0.1",
-      port: 7545,
-      network_id: "*"
-    },
-    ropsten: {
+    fuji: {
       provider: function() {
-        return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/"+process.env.INFURA_ID)
+            return new HDWalletProvider(mnemonic, `https://avalanche--fuji--rpc.datahub.figment.io/apikey/${APIKEY}/ext/bc/C/rpc`)
       },
-      network_id: 3
+      network_id: "*",
+      gas: 3000000,
+      gasPrice: 470000000000
     }
   },
   solc: {
